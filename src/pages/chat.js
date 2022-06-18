@@ -1,5 +1,6 @@
 
-import React, {useRef, useState} from 'react'
+import React, {useRef, useState} from 'react';
+import "./app.css";
 
 import firebase from "firebase/compat/app";
 import "firebase/compat/firestore";
@@ -18,20 +19,21 @@ firebase.initializeApp({
   measurementId: "G-XECP1RFCDC"
 })
 
+
 const auth = firebase.auth();
 const firestore = firebase.firestore();
 
 const Chat = () => {
     const [user] = useAuthState(auth);
-    return (
-    <div>
-        <header>
 
+    return (
+    <div className="App">
+        <header>
+            <SignOut/>
         </header>
 
         <section>
             {user ? <ChatRoom/>: <SignIn/>}
-            
         </section>
 
     </div>
@@ -44,28 +46,52 @@ function SignIn() {
         auth.signInWithPopup(provider);
     }
     return( <>
-    <button onClick={signInWithGoogle}>Sign in with Google</button>
+    <button className="sign-in" onClick={signInWithGoogle}>Sign in with Google</button>
     </>)
 }
 
 function SignOut() {
     return auth.currentUser && (
-        <button onClick={() => auth.signOut()}>Sign Out</button>
+        <button className="sign-out" onClick={() => auth.signOut()}>Sign Out</button>
     )
 }
 
 function ChatRoom(){
+    const dummy = useRef()
     const messagesRef = firestore.collection("messages");
     const query = messagesRef.orderBy("createdAt").limit(25);
 
     const [messages] = useCollectionData(query, {idField:"id"});
 
+    const [formValue, setFormValue] = useState('');
+
+    const sendMessage = async(e) => {
+        e.preventDefault();
+
+        const {uid} = auth.currentUser;
+
+        await messagesRef.add({
+            text: formValue,
+            createdAt: firebase.firestore.FieldValue.serverTimestamp(),
+            uid
+        });
+
+        setFormValue('');
+
+        dummy.current.scrollIntoView({behaviour: 'smooth'});
+    }
 
     return (
         <>
-            <div>
+            <main>
                 {messages && messages.map(msg => <ChatMessage key={msg.id} message={msg}></ChatMessage>)}
-            </div>
+                <span ref={dummy}></span>
+            </main>
+
+            <form onSubmit={sendMessage}>
+                <input value={formValue} onChange={(e) => setFormValue(e.target.value)} placeholder="say something nice!"/>
+                <button type="submit">Submit</button>
+            </form>
         </>
     )
 }
@@ -73,9 +99,12 @@ function ChatRoom(){
 function ChatMessage(props) {
     const {text, uid} = props.message;
   
+    const messageClass = uid === auth.currentUser.uid ? 'sent': 'received';
 
     return ( <>
-        <p>{text}</p>
+        <div className={`message ${messageClass}`}>
+            <p>{text}</p>
+        </div>
     </>)
 }
 
