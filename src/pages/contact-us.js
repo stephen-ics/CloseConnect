@@ -3,6 +3,7 @@ import "./contact-us.css";
 import discord from "./icons/discord.png";
 import instagram from "./icons/instagram.webp";
 import gmail from "./icons/gmail.webp";
+import devpost from "./icons/devpost.png"
 
 const ContactUs = () => {
   return (
@@ -13,14 +14,11 @@ const ContactUs = () => {
                 <h1>Stephen Ni</h1>
                 <img className="pfp"></img>
                 <div className="icons">
-                    <a>
-                        <img class="icon" src={discord}></img>
+                    <a href="https://devpost.com/744831" target="_blank">
+                        <img class="icon" src={devpost}></img>
                     </a>
-                    <a>
+                    <a href="https://www.instagram.com/stephen.turtles/" target="_blank">
                         <img class="icon" src={instagram}></img>
-                    </a>
-                    <a>
-                        <img class="icon" src={gmail}></img>
                     </a>
                 </div>
             </div>
@@ -28,14 +26,11 @@ const ContactUs = () => {
                 <h1>Sophie Yang</h1>
                 <img className="pfp"></img>
                 <div className="icons">
-                    <a>
-                        <img class="icon" src={discord}></img>
+                    <a href="https://devpost.com/sophieyang12345" target="_blank">
+                        <img class="icon" src={devpost}></img>
                     </a>
-                    <a>
+                    <a href="instagram.com/sophi3yang/" target="_blank">
                         <img class="icon" src={instagram}></img>
-                    </a>
-                    <a>
-                        <img class="icon" src={gmail}></img>
                     </a>
                 </div>
             </div>
@@ -44,13 +39,10 @@ const ContactUs = () => {
                 <img className="pfp"></img>
                 <div className="icons">
                     <a>
-                        <img class="icon" src={discord}></img>
+                        <img class="icon" src={devpost}></img>
                     </a>
-                    <a>
+                    <a href="https://www.instagram.com/aj_mmv/" target="_blank">
                         <img class="icon" src={instagram}></img>
-                    </a>
-                    <a>
-                        <img class="icon" src={gmail}></img>
                     </a>
                 </div>
             </div>
@@ -59,13 +51,10 @@ const ContactUs = () => {
                 <img className="pfp"></img>
                 <div className="icons">
                     <a>
-                        <img class="icon" src={discord}></img>
+                        <img class="icon" src={devpost}></img>
                     </a>
-                    <a>
+                    <a href="https://www.instagram.com/diass_aaron/" target="_blank">
                         <img class="icon" src={instagram}></img>
-                    </a>
-                    <a>
-                        <img class="icon" src={gmail}></img>
                     </a>
                 </div>
             </div>

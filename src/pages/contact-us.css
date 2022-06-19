@@ -1,15 +1,17 @@
 
-
+body{
+    background: linear-gradient(100deg, rgb(23, 243, 251)0%, rgb(253, 21, 253)100%);
+    
+}
     
 .contacts header {
     color: #ffffff;
-    background: #87ceeb;
     padding: 50px;
-
     display: flex;
     justify-content: center;
     font-size: 20px;
 }
+
 
 .container {
     display: flex;
@@ -17,16 +19,24 @@
 }
 
 .profiles {
-    margin-left: 100px;
+    margin-left: 200px;
+    margin-top: 25px;
+    margin-bottom: 75px;
+    display: flex;
+    align-items: center;
+
+
 }
 
 .icons{
     display: flex;
     flex-wrap: wrap;
+  
 }
 
 .icon{
-    height: 50px;
-    width: 50px;
-    margin-left: 10px;
+    height: 80px;
+    width: 80px;
+    margin-left: 20px;
 }
+

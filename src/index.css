@@ -7,11 +7,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.background {
-  background: linear-gradient(100deg, rgb(23, 243, 251)0%, rgb(253, 21, 253)100%);
-  height: 1080px;
-  width: 1630px;
-}
 
 .chat-box {
   background-color: pink;
