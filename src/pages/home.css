@@ -1,0 +1,23 @@
+body{
+    background: linear-gradient(100deg, rgb(23, 243, 251)0%, rgb(253, 21, 253)100%);
+}
+    
+.home header {
+    color: #ffffff;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    background-image: url("https://image.shutterstock.com/image-vector/abstract-mash-line-pixel-world-260nw-1303309456.jpg");
+    height: 120px;
+}
+
+.sub{
+    background: linear-gradient(100deg, rgb(192, 231, 234)0%, rgb(235, 172, 235)100%);
+    padding: 20px;
+    margin-top: 30px;
+}
+
+.sub h3{
+    font-size: 18px;
+}

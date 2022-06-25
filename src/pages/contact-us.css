@@ -1,7 +1,6 @@
 
 body{
     background: linear-gradient(100deg, rgb(23, 243, 251)0%, rgb(253, 21, 253)100%);
-    
 }
     
 .contacts header {
@@ -24,14 +23,11 @@ body{
     margin-bottom: 75px;
     display: flex;
     align-items: center;
-
-
 }
 
 .icons{
     display: flex;
     flex-wrap: wrap;
-  
 }
 
 .icon{

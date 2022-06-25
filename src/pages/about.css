@@ -1,0 +1,29 @@
+
+body{
+    background: linear-gradient(100deg, rgb(23, 243, 251)0%, rgb(253, 21, 253)100%); 
+}
+    
+.about header {
+    color: #ffffff;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.about-us {
+    background: linear-gradient(100deg, rgb(203, 222, 223)0%, rgb(240, 177, 240)100%); 
+    margin-bottom: 30px;
+    width: 250px;
+    margin-left: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    line-height: 2;
+}
+
+

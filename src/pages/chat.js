@@ -1,6 +1,7 @@
 
 import React, {useRef, useState} from 'react';
 import "./app.css";
+import Topics from "./topics.js"
 
 import firebase from "firebase/compat/app";
 import "firebase/compat/firestore";
@@ -30,6 +31,8 @@ const Chat = () => {
     <div className="App">
         <header>
             <SignOut/>
+            <Topics/>
+            
         </header>
 
         <section>
@@ -92,6 +95,7 @@ function ChatRoom(){
                 <input value={formValue} onChange={(e) => setFormValue(e.target.value)} placeholder="say something nice!"/>
                 <button type="submit">Submit</button>
             </form>
+            
         </>
     )
 }

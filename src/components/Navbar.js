@@ -8,14 +8,17 @@ import {
   NavBtnLink
 } from "./NavbarElements";
 
+import logo from "./logo.png"
+
+
+
 const Navbar = (props) => {
   return (
     <>
       <Nav>
         <NavLink to="/">
-          <h1>Logo</h1>
+          <img src={logo} style={{width:"70px"}}></img>
         </NavLink>
-        <Bars />
         <NavMenu>
           <NavLink to="/about">
             About
